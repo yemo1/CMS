@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="Site Panel"  description="Control Panel" roles="*">
+    <siteMapNode title="Data Alert Services" description="Data Services" url="~/DataService.aspx"/>
+    <siteMapNode title="Add new user" description="Registration Page" url="~/Account/Register.aspx"/>
+    <siteMapNode title="Add MTNPlay Service" description="New Service" url="~/NewService.aspx"/>
+    <siteMapNode title="View Contents" description="Contents View" url="~/vContents.aspx"/>
+    <siteMapNode title="Submit Campaigns" description="Campaign submission" url="~/Campaign.aspx"/>
+    <siteMapNode title="World Cup" description="World cup service" roles="*" >
+      <siteMapNode title="Create event" description="Create an event" url="Events.aspx" />
+      <siteMapNode title="View Predictions" description="View subscribers predictions" url="Predictions.aspx" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

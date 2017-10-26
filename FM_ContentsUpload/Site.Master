@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FM_ContentsUpload.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Accordion.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/jquery-ui-1.8.19.custom.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/jquery.datetimepicker.css" rel="stylesheet" />
+    <link href="Styles/jquery.timepicker.css" rel="stylesheet" type="text/css" />
+
+    <script src="Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/script.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.10.0.custom.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.timepicker.min.js" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <div class="page">
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+            <div class="header">
+                <div class="title">
+                    <h1>Funmobile Content Management
+                    </h1>
+                </div>
+                <div class="loginDisplay">
+                    Welcome <span class="bold">
+                        <asp:LoginName ID="HeadLoginName" runat="server" />
+                    </span>!
+                <div>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick">
+                            </asp:Timer>
+                            <asp:Label ID="lblDate" runat="server" Text="Label" Font-Bold="True"></asp:Label>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+                </div>
+            </div>
+            <div class="leftCol">
+                <ul class="menus">
+                    <li>
+                        <asp:HyperLink runat="server" ID="lnkHome" NavigateUrl="~/Default.aspx">Batch Upload</asp:HyperLink>
+                    </li>
+                    <asp:Repeater runat="server" ID="menu" DataSourceID="SiteMapDataSource1">
+                        <ItemTemplate>
+                            <li>
+                                <asp:HyperLink ID="lnkMenuItem" runat="server" NavigateUrl='<%# Eval("Url") %>'><%# Eval("Title") %></asp:HyperLink>
+
+                                <asp:Repeater ID="submenu" runat="server" DataSource="<%# ((SiteMapNode) Container.DataItem).ChildNodes %>">
+                                    <HeaderTemplate>
+                                        <ul>
+                                    </HeaderTemplate>
+                                    <ItemTemplate>
+                                        <li>
+                                            <asp:HyperLink ID="lnkMenuItem" runat="server" NavigateUrl='<%# Eval("Url") %>'><%# Eval("Title") %></asp:HyperLink>
+                                        </li>
+                                    </ItemTemplate>
+                                    <FooterTemplate>
+                                        </ul>
+                                    </FooterTemplate>
+                                </asp:Repeater>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <li>
+                        <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                            <LoggedInTemplate>
+                                <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="RedirectToLoginPage" LogoutText="Log Out" />
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </li>
+                </ul>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            <div class="clear">
+            </div>
+            <div class="footer">
+                <div class="footerLeft">
+                    Site designed by Funmobile Limited
+                </div>
+                <div class="footerRight">
+                    Funmobile Limited ©  <%=DateTime.Now.ToString("yyyy") %>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

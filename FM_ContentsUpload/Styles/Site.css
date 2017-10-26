@@ -1,0 +1,653 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+	background: #ffffff;
+	font-size: .80em;
+	font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+a:link, a:visited
+{
+	color: #034af3;
+}
+
+a:hover
+{
+	color: #1d60ff;
+	text-decoration: none;
+}
+
+a:active
+{
+	color: #034af3;
+}
+
+p
+{
+	margin-bottom: 10px;
+	line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+	font-size: 1.5em;
+	color: #666666;
+	font-variant: small-caps;
+	text-transform: none;
+	font-weight: 200;
+	margin-bottom: 0px;
+}
+
+h1
+{
+	font-size: 1.6em;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+h2
+{
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+h3
+{
+	font-size: 1.2em;
+}
+
+h4
+{
+	font-size: 1.1em;
+}
+
+h5, h6
+{
+	font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+	margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+	width: 960px;
+	background-color: #ffffff;
+	margin: 80px auto 20px auto;
+}
+
+.header
+{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	background: #ffffff;
+	width: 100%;
+	border-bottom:4px solid green;
+}
+
+.header h1
+{
+	font-weight: 700;
+	margin: 0px;
+	padding: 0px 0px 0px 20px;
+	color: #FFCC66;
+	border: none;
+	line-height: 2em;
+	font-size: 2em;
+}
+
+.header h4
+{
+	/*float:right;*/
+	margin-right:12px;
+	color:#000000;
+}
+
+.main
+{
+	padding: 0px 12px;
+	margin: 12px 0px 8px 8px;
+	min-height: 420px;
+	width:65%;
+	float:left;
+}
+
+.leftCol
+{
+	clear:both;
+	padding: 0px 0px;
+	margin: 0 12px 8px 0;
+	width: 25%;
+	/*min-height: 300px;*/
+	border:1px solid #FFCC66;
+	float:left;
+}
+
+.footer
+{
+	position: relative;
+	margin: 22px 0 8px 0;
+	padding: 0px;
+	border-top:4px solid green;
+	color: #4e5766;
+	min-height:100px;
+}
+.footerLeft
+{
+	color: #4e5766;
+	line-height: normal;
+	float:left;
+	text-align:left;
+}
+
+.footerRight
+{
+	text-align:right;
+	color:#4e5766;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+	background-color:#3a4f63;
+	width:100%;
+}
+
+div.menu
+{
+	padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+	background-color: #465c71;
+	border: 1px #4e667d solid;
+	color: #dde4ec;
+	display: block;
+	line-height: 1.35em;
+	padding: 4px 20px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+	background-color: #bfcbd6;
+	color: #465c71;
+	text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+	background-color: #465c71;
+	color: #cfdbe6;
+	text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+	margin: 1em 0px;
+	padding: 1em;
+	border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+	margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+	display: block;
+}
+
+fieldset label.inline 
+{
+	display: inline;
+}
+
+legend 
+{
+	font-size: 1.1em;
+	font-weight: 600;
+	padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+	width: 320px;
+	border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+	width: 320px;
+	border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+	width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+	clear: both;
+}
+
+.title
+{
+	display: block;
+	float: left;
+	text-align: left;
+	width: auto;
+}
+
+.loginDisplay
+{
+	font-size: 1.1em;
+	display: block;
+	text-align: right;
+	padding: 10px;
+	color: Green;
+}
+
+.loginDisplay Div
+{
+	color:Gray;
+	margin-top:4px;
+}
+
+.loginDisplay a:link
+{
+	color: #FFCC66;
+}
+
+.loginDisplay a:visited
+{
+	color: #FFCC66;
+}
+
+.loginDisplay a:hover
+{
+	color: blue;
+}
+
+.failureNotification
+{
+	font-size: 1.2em;
+	color: Red;
+}
+
+.bold
+{
+	font-weight: bold;
+}
+
+.submitButton
+{
+	text-align: right;
+	padding-right: 10px;
+}
+
+
+
+/*User defined styles*/
+div.myforms
+{
+	clear:both;
+	border-top: 1px dashed gray;
+	padding: 5px 0 8px 0;
+	width:580px;
+}
+
+.labels
+{
+	float:left;
+	/*display:block;*/
+	background-color:#eee;
+	color:black;
+	text-align:right;
+	margin-right:8px;
+	padding:4px 4px;
+	width:200px;
+}
+
+.labels span
+{
+	color:Red;
+	padding-left:4px;
+}
+
+.myText
+{
+	width:200px;
+	height:20px;
+	border:1px solid gray;
+}
+
+.ui-datepicker
+{
+	font-size:9pt !important 
+}
+
+.GreenText
+{
+	color:Green;
+	/*font-weight:bold;*/
+	font-size:22px;
+}
+/*-----------------------------------------------*/
+							  
+
+.cssform p{
+width: 300px;
+clear: left;
+margin: 0;
+padding: 5px 0 8px 0;
+padding-left: 155px; /*width of left column containing the label elements*/
+border-top: 1px dashed gray;
+height: 1%;
+}
+
+.cssform span
+{
+	color:Red;
+}
+.cssform label
+{
+background-color:#eee;
+float: left;
+text-align:right;
+margin-left: -155px; /*width of left column*/
+width: 150px; /*width of labels. Should be smaller than left column (155px) to create some right margin*/
+}
+
+.cssform input[type="text"]{ /*width of text boxes. IE6 does not understand this attribute*/
+width: 250px;
+}
+
+.cssform textarea{
+width: 250px;
+height: 150px;
+}
+
+/*.threepxfix class below:
+Targets IE6- ONLY. Adds 3 pixel indent for multi-line form contents.
+to account for 3 pixel bug: http://www.positioniseverything.net/explorer/threepxtest.html
+*/
+
+* html .threepxfix{
+margin-left: 3px;
+}
+	  
+	  
+/*Notification classes*/
+.notification-box 
+{
+	margin:-10px 0px 2px -30px;
+	width:100%;
+	position: relative;
+	margin-bottom: 20px;
+	border-radius: 3px;	
+	text-align:center;
+	font-weight:bold;
+	padding: 10px 10px 10px 32px;
+	background-repeat: no-repeat;
+	background-position: 10px 11px;
+	border: 1px solid;
+	color:#444;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px rgba(255,255,255,0.4) inset;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px rgba(255,255,255,0.4) inset;
+}
+
+a.notification-close {
+	position: absolute;
+	right: 5px;
+	top: 5px;	
+	color: #666 !important;
+	text-decoration: none !important;
+	font-weight: bold;
+	font-size: 10px;
+	padding: 5px;
+	line-height: normal;
+	cursor:pointer;
+}
+
+.notification-box p {
+	margin-bottom: 0;
+	margin-top: 20px;	
+}
+
+.notification-box label {
+	margin-bottom: 0;
+	margin-top: 20px;	
+}
+
+.notification-box > label:first-child {
+	margin: 0;	
+}
+
+.notification-box > p:first-child {
+	margin: 0;	
+}
+
+.notification-box-info {
+	background-color: #cfe6fc;
+	background-image: url('Images/info.png');
+	border-color: #a4c8f5; 	
+}
+
+.notification-box-success {
+	background-color: #d2f7ad;
+	background-image:url('Images/tick.png');
+	border-color: #aedb2e; 	
+}
+
+.notification-box-warning {
+	background-color: #fae7a2;
+	background-image: url('Images/warning.png');
+	border-color: #f5c558; 	
+}
+
+.notification-box-error {
+	background-color: #ffd5af;
+	background-image: url('Images/delete.png');
+	border-color: #f8b472; 	
+}
+
+table.DDGridView, table.DDListView
+{
+	width: 100%;
+	color: #666;
+	/*border:solid 1px #dbddff;*/
+	border:none;
+	font: 12px Tahoma, Arial, Sans-Serif;
+	margin-top:1em;
+}
+
+table.DDGridView .th, table.DDGridView .td, table.DDListView .th, table.DDListView .td
+{
+	white-space: nowrap;
+}
+
+table.DDGridView .th, table.DDListView .th
+{
+	background: url(images/header_back.gif) repeat-x;
+	line-height:1.3em;
+	text-align: left;
+	font-size: 1em;
+	border:solid 1px #dbddff;
+}
+
+table.DDGridView .th a, table.DDListView .th a
+{
+	color: #666;
+	text-decoration: none;
+}
+
+table.DDGridView .td, table.DDListView .td
+{
+	border: dotted 1px #dbddff;
+	border-left-width:0px;
+	border-right-width:0px;
+	text-align:left;
+	padding: 6px;
+}
+
+
+table.DDGridView .td a, table.DDListView .td a
+{
+	color: #718ABE;
+	text-decoration: none;
+	margin-right: 6px;
+	text-align:center;
+	font-weight:bold;
+	
+}
+
+table.DDGridView .DDSelected a, table.DDListView .DDSelected a
+{
+	color: #718ABE;
+	text-decoration: none;
+	margin-right: 6px;
+	
+}
+
+table.DDGridView .DDSelected a:hover, table.DDListView .DDSelected a:hover
+{
+	color: #000099;
+	text-decoration: underline;
+}
+
+table.DDGridView .td a:hover, table.DDListView .td a:hover
+{
+	color: #000099;
+	text-decoration: underline;
+}
+
+table.DDGridView .td:hover
+{
+	background-color:#eee;
+}
+
+/*	DataPager	*/
+div.DDPager
+{
+	padding: 0px 6px;
+}
+
+
+.orange {
+	color: #fef4e9;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+	padding: 3px 10px;
+	cursor:pointer;
+	border-radius: 4px;
+}
+
+.orange:hover {
+	background: #f47c20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+
+.orange:active {
+	color: #fcd3a5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+
+.formStyle
+{
+	margin:10em auto 3em auto;
+	text-align:left;
+	width:300px;
+	border:1px solid #999;
+	padding:0 0 10px 0;
+	background:#fff;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	box-shadow: 0 0 4px #999;
+	-webkit-box-shadow: 0 0 4px #999;
+	-moz-box-shadow: 0 0 4px #999;
+}
+
+.textEffect
+{
+	 border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px; 
+	width:180px;
+	border:1px solid #999;
+	margin:5px 0 5px 5px;
+	
+}
+
+.loginTitle
+{
+	border-radius:20px 20px 0 0;
+	-moz-border-radius: 20px 20px 0 0;
+	-webkit-border-radius: 20px 20px 0 0;
+	width: 300px;
+	padding:5px 0 5px 0;
+	background-color:#FFCC66;
+	color:#ffffff;
+}
+
+.signUpHeader
+{
+	/*border-bottom:1.5px solid #FFCC66;*/
+	font-size:20px;
+	color:Green;
+	width:80%;
+	margin:1em 0 0 0;
+}
+
+
+.multiText
+{
+    width:300px;
+    resize:none;
+}
